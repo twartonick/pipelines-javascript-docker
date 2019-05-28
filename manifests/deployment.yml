@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: ttwpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ttwpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ttwpipelinesjavascriptdocker 
+          image: ttwcontainerregtest.azurecr.io/ttwpipelinesjavascriptdocker 
+          ports:
+          - containerPort: 8080
